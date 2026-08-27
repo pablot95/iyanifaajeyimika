@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Iyanifa Ajeyimika — Consultas de Ifá en Buenos Aires</title>
+<meta name="description" content="Consultas del sistema de adivinación Ifá en Buenos Aires: trabajo, pareja, salud, familia y paz mental. Iniciaciones de Ifá, Orí, Òrìṣà, Egúngún y Egbé. Ilé Ase Orúnmila.">
+<meta name="theme-color" content="#1D5137">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Iyanifa Ajeyimika — Consultas de Ifá en Buenos Aires">
+<meta property="og:description" content="Traé tu pregunta: se abre el tablero, cae tu signo y salís con un camino concreto. Consultas e iniciaciones en Ilé Ase Orúnmila.">
+<meta property="og:image" content="images/cauries-1600x1300.webp">
+<meta property="og:locale" content="es_AR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D5137'/%3E%3Cg stroke='%23E9B22B' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M11 7v7M21 7v7M11 18v7M16 18v7M21 18v7'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=switzer@400,500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+<noscript><style>[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Iyanifa Ajeyimika — Ilé Ase Orúnmila",
+  "description": "Sistema de adivinación Ifá: consultas e iniciaciones en Buenos Aires y a distancia.",
+  "telephone": "+5491130430604",
+  "areaServed": "Buenos Aires, Argentina",
+  "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": -34.6037, "longitude": -58.3816 },
+  "priceRange": "$$",
+  "knowsLanguage": "es-AR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Necesito saber algo de Ifá para consultar?", "acceptedAnswer": { "@type": "Answer", "text": "No. Venís con tu pregunta en tus palabras y yo traduzco lo que el signo responde. La mayoría de las personas que consultan llegan sin conocer la tradición." } },
+    { "@type": "Question", "name": "¿Cuánto dura una consulta?", "acceptedAnswer": { "@type": "Answer", "text": "Entre 40 y 60 minutos según lo que aparezca. Se coordina día y horario por WhatsApp." } },
+    { "@type": "Question", "name": "¿Puedo consultar si no vivo en Buenos Aires?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. La consulta se hace por videollamada o audio y se te envía por escrito el signo, el consejo y el ebo que corresponda." } },
+    { "@type": "Question", "name": "¿Qué es un odù?", "acceptedAnswer": { "@type": "Answer", "text": "Es el signo que cae en el tablero. Cada uno de los 256 odù trae historias, consejos y advertencias que se leen sobre tu situación concreta." } },
+    { "@type": "Question", "name": "¿Ifá reemplaza al médico o al psicólogo?", "acceptedAnswer": { "@type": "Answer", "text": "No. Ifá acompaña y orienta, no diagnostica ni cura enfermedades ni sustituye tratamientos médicos o psicológicos." } }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<svg class="grain-def" aria-hidden="true" focusable="false"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" result="noise"/><feColorMatrix in="noise" type="saturate" values="0" result="mono"/><feComposite in="mono" in2="SourceGraphic" operator="in"/></filter></svg>
+
+<div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#inicio" aria-label="Iyanifa Ajeyimika, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 4"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M11 9v6M23 9v6M11 20v6M17 20v6M23 20v6"/></g></svg>
+      </span>
+      <span class="brand-text"><strong>Iyanifa Ajeyimika</strong><em>Ilé Ase Orúnmila</em></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#consultas">Consultas</a>
+      <a href="#odu">La consulta</a>
+      <a href="#iniciaciones">Iniciaciones</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="nav-cta" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20pedir%20una%20consulta%20de%20If%C3%A1." target="_blank" rel="noopener">Escribime</a>
+    </nav>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="hero" id="inicio">
+  <div class="hero-field" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>Ilé Ase Orúnmila · Buenos Aires</p>
+      <h1 data-animate="lines" style="opacity:0"><span>Traé tu pregunta.</span><span>Ifá marca</span><span class="h1-em">el camino.</span></h1>
+      <p class="hero-lead" data-animate="fade" style="transform:translateY(20px);opacity:0">Consultas del sistema de adivinación Ifá para decisiones que no pueden esperar: trabajo, pareja, salud, familia. Se abre el tablero, cae tu signo y salís sabiendo qué hacer con él.</p>
+      <div class="hero-actions" data-animate="fade" style="transform:translateY(24px);opacity:0">
+        <a class="btn btn-primary" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20pedir%20una%20consulta%20de%20If%C3%A1.%20%C2%BFC%C3%B3mo%20coordinamos%3F" target="_blank" rel="noopener">Pedir mi consulta</a>
+        <a class="btn btn-ghost" href="#consultas">Ver los temas que se consultan</a>
+      </div>
+      <ul class="hero-meta" data-animate="fade" style="transform:translateY(24px);opacity:0">
+        <li>Presencial en Buenos Aires</li>
+        <li>También a distancia</li>
+        <li>Se responde el mismo día</li>
+      </ul>
+    </div>
+
+    <div class="hero-scene">
+      <div class="opon opon--hero" data-parallax="0.10">
+        <svg viewBox="0 0 420 420" role="img" aria-label="Opón Ifá, el tablero de adivinación">
+          <defs>
+            <radialGradient id="woodHero" cx="45%" cy="38%" r="72%">
+              <stop offset="0%" stop-color="#A0663A"/><stop offset="55%" stop-color="#7B4A22"/><stop offset="100%" stop-color="#4C2C12"/>
+            </radialGradient>
+            <radialGradient id="dustHero" cx="50%" cy="45%" r="60%">
+              <stop offset="0%" stop-color="#FBEFD4"/><stop offset="100%" stop-color="#E6CF9F"/>
+            </radialGradient>
+          </defs>
+          <circle cx="210" cy="210" r="205" fill="url(#woodHero)"/>
+          <g stroke="#3A200C" stroke-opacity=".45" fill="none">
+            <circle cx="210" cy="210" r="196" stroke-width="1.5"/>
+            <circle cx="210" cy="210" r="160" stroke-width="1.5"/>
+          </g>
+          <g class="opon-carve" fill="#E9B22B" fill-opacity=".55"></g>
+          <circle cx="210" cy="210" r="152" fill="url(#dustHero)"/>
+          <circle cx="210" cy="210" r="152" fill="#3A200C" fill-opacity=".08" filter="url(#grain)"/>
+          <g stroke="#8A6A3A" stroke-opacity=".55" stroke-width="5" stroke-linecap="round">
+            <path d="M160 150v34M160 202v34M160 254v34M160 306v34"/>
+            <path d="M242 150v34M254 150v34M248 202v34M242 254v34M254 254v34M248 306v34"/>
+          </g>
+        </svg>
+      </div>
+      <figure class="hero-frame" data-parallax="-0.16">
+        <img src="images/turbante-cauries-1200x1600.webp" width="1200" height="1600" alt="Retrato con aros de cauríes, indumentaria tradicional yoruba" fetchpriority="high" decoding="async">
+        <figcaption>Cauríes · el habla de los orisas</figcaption>
+      </figure>
+      <img class="hero-cut" src="images/mano-cauri.webp" width="1031" height="1200" alt="Mano sosteniendo un caurí sobre el tablero" data-parallax="0.05" decoding="async">
+      <span class="hero-chip" data-parallax="-0.06">256 odù<em>uno es el tuyo</em></span>
+      <div class="dust-motes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="casa" id="casa">
+  <div class="wrap casa-grid">
+    <figure class="casa-media" data-animate="mask" style="opacity:0">
+      <img src="images/hero-collares-1200x1600.webp" width="1200" height="1600" alt="Collares de cuentas verdes y amarillas sobre indumentaria ceremonial blanca" loading="lazy" decoding="async">
+    </figure>
+    <div class="casa-copy">
+      <p class="eyebrow" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>01 — La casa</p>
+      <h2 data-animate="wipe" style="opacity:0">Una casa de Ifá que trabaja de frente</h2>
+      <p data-animate="fade" style="transform:translateY(18px);opacity:0">Soy Ajeyimika, iyanifá de Ilé Ase Orúnmila. Ifá es el sistema de adivinación del pueblo yoruba: no adivina el futuro como un truco, lee la situación en la que estás parado y dice qué camino se abre y qué hay que hacer para caminarlo.</p>
+      <p data-animate="fade" style="transform:translateY(18px);opacity:0">Acá no vas a escuchar promesas de amarres ni trabajos garantizados. Vas a escuchar tu signo, lo que aconseja, lo que advierte y qué ofrenda corresponde. Después la decisión es tuya.</p>
+      <ul class="casa-list" data-animate-stagger>
+        <li data-animate="fade" style="transform:translateY(18px);opacity:0"><span class="odu-tick" aria-hidden="true"></span><strong>Consulta clara</strong>Se te explica el signo en castellano, sin vueltas.</li>
+        <li data-animate="fade" style="transform:translateY(18px);opacity:0"><span class="odu-tick" aria-hidden="true"></span><strong>Reserva absoluta</strong>Lo que se habla en el tablero no sale de ahí.</li>
+        <li data-animate="fade" style="transform:translateY(18px);opacity:0"><span class="odu-tick" aria-hidden="true"></span><strong>Sin apuro</strong>Se atiende de a una persona por turno.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="consultas" id="consultas">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>02 — Consultas</p>
+      <h2 data-animate="wipe" style="opacity:0">Con qué llega la gente al tablero</h2>
+      <p class="sec-lead" data-animate="fade" style="transform:translateY(18px);opacity:0">Traé la pregunta concreta que te trajo hasta acá. Elegí el tema y escribime: coordinamos día y horario por WhatsApp.</p>
+    </header>
+    <div class="cards" data-animate-stagger>
+      <article class="card" data-animate="rise" style="transform:translateY(48px);opacity:0">
+        <span class="card-num" aria-hidden="true">01</span>
+        <svg class="card-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M6 4v16M20 4v16M34 4v16"/></svg>
+        <h3>Negocios y trabajo</h3>
+        <p>Un cambio de rubro, un socio nuevo, un local que no arranca, la decisión de irte o quedarte.</p>
+        <a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20una%20consulta%20por%20negocios%20y%20trabajo." target="_blank" rel="noopener">Consultar por este tema</a>
+      </article>
+      <article class="card" data-animate="rise" style="transform:translateY(48px);opacity:0">
+        <span class="card-num" aria-hidden="true">02</span>
+        <svg class="card-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M6 4v16M14 4v16M28 4v16"/></svg>
+        <h3>Parejas</h3>
+        <p>Vínculos que se trabaron, dudas de seguir, separaciones que no cierran, encuentros que recién empiezan.</p>
+        <a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20una%20consulta%20por%20pareja." target="_blank" rel="noopener">Consultar por este tema</a>
+      </article>
+      <article class="card" data-animate="rise" style="transform:translateY(48px);opacity:0">
+        <span class="card-num" aria-hidden="true">03</span>
+        <svg class="card-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M6 4v16M20 4v16M28 4v16M36 4v16"/></svg>
+        <h3>Salud</h3>
+        <p>Acompañamiento espiritual en un proceso de salud, propio o de alguien de la familia. Nunca en lugar del médico.</p>
+        <a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20una%20consulta%20por%20salud." target="_blank" rel="noopener">Consultar por este tema</a>
+      </article>
+      <article class="card" data-animate="rise" style="transform:translateY(48px);opacity:0">
+        <span class="card-num" aria-hidden="true">04</span>
+        <svg class="card-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M6 4v16M14 4v16M28 4v16M36 4v16"/></svg>
+        <h3>Familia</h3>
+        <p>Casas divididas, hijos, herencias, temas que vienen de atrás y se repiten de generación en generación.</p>
+        <a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20una%20consulta%20por%20familia." target="_blank" rel="noopener">Consultar por este tema</a>
+      </article>
+      <article class="card" data-animate="rise" style="transform:translateY(48px);opacity:0">
+        <span class="card-num" aria-hidden="true">05</span>
+        <svg class="card-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M6 4v16M20 4v16M34 4v16M14 4v16"/></svg>
+        <h3>Paz mental</h3>
+        <p>Cuando la cabeza no para, cuando algo pesa y no tiene nombre. Se trabaja sobre tu Orí, tu cabeza.</p>
+        <a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20una%20consulta%20por%20paz%20mental." target="_blank" rel="noopener">Consultar por este tema</a>
+      </article>
+      <article class="card card--wide" data-animate="rise" style="transform:translateY(48px);opacity:0">
+        <span class="card-num" aria-hidden="true">06</span>
+        <svg class="card-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M6 4v16M14 4v16M28 4v16M20 4v16M34 4v16"/></svg>
+        <h3>Encuentro con tu propio destino</h3>
+        <p>La consulta más honda: qué viniste a hacer, qué acordó tu Orí antes de nacer y qué te está frenando de vivirlo. Se hace sin apuro y se registra por escrito.</p>
+        <a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20la%20consulta%20de%20encuentro%20con%20mi%20destino." target="_blank" rel="noopener">Consultar por este tema</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="odu" id="odu">
+  <div class="odu-sticky">
+    <div class="wrap odu-grid">
+      <div class="odu-visual">
+        <div class="opon opon--big">
+          <svg viewBox="0 0 460 460" role="img" aria-label="Tablero de Ifá con el signo marcándose en el polvo">
+            <defs>
+              <radialGradient id="woodBig" cx="45%" cy="38%" r="72%">
+                <stop offset="0%" stop-color="#A0663A"/><stop offset="55%" stop-color="#7B4A22"/><stop offset="100%" stop-color="#48290F"/>
+              </radialGradient>
+              <radialGradient id="dustBig" cx="50%" cy="45%" r="62%">
+                <stop offset="0%" stop-color="#FBEFD4"/><stop offset="100%" stop-color="#E4CB98"/>
+              </radialGradient>
+            </defs>
+            <circle cx="230" cy="230" r="224" fill="url(#woodBig)"/>
+            <circle cx="230" cy="230" r="214" fill="none" stroke="#3A200C" stroke-opacity=".4" stroke-width="1.6"/>
+            <g class="opon-carve opon-carve--big" fill="#E9B22B" fill-opacity=".5"></g>
+            <circle class="odu-dust" cx="230" cy="230" r="168" fill="url(#dustBig)"/>
+            <circle class="odu-dust" cx="230" cy="230" r="168" fill="#3A200C" fill-opacity=".1" filter="url(#grain)"/>
+            <circle cx="230" cy="230" r="168" fill="none" stroke="#8A6A3A" stroke-opacity=".35" stroke-width="1.4"/>
+            <g class="odu-marks" stroke="#3F2411" stroke-width="9" stroke-linecap="round">
+              <path class="odu-mark" data-slot="1" d="M176 118v46" pathLength="1"/>
+              <path class="odu-mark" data-slot="2" d="M176 190v46" pathLength="1"/>
+              <path class="odu-mark" data-slot="3" d="M176 262v46" pathLength="1"/>
+              <path class="odu-mark" data-slot="4" d="M176 334v46" pathLength="1"/>
+              <path class="odu-mark" data-slot="5" d="M284 118v46" pathLength="1"/>
+              <path class="odu-mark" data-slot="6" d="M284 190v46" pathLength="1"/>
+              <path class="odu-mark" data-slot="7" d="M284 262v46" pathLength="1"/>
+              <path class="odu-mark" data-slot="8" d="M284 334v46" pathLength="1"/>
+            </g>
+          </svg>
+          <span class="odu-name" id="odu-name">Èjì Ogbè<em>el signo que abre</em></span>
+        </div>
+        <figure class="odu-ikin">
+          <img src="images/ikin-bandeja-1400x1400.webp" width="1400" height="1400" alt="Ikin, nueces de palma usadas en la adivinación de Ifá" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="odu-copy">
+        <p class="eyebrow"><span class="odu-tick" aria-hidden="true"></span>03 — Así se lee tu odù</p>
+        <h2>El tablero se marca<br>mientras vos preguntás</h2>
+        <ol class="odu-steps">
+          <li class="odu-step" data-step="1"><span class="step-n">01</span><div><h3>Traés tu pregunta</h3><p>La decís en tus palabras, tal como la pensás. No hace falta que sepas nada de Ifá.</p></div></li>
+          <li class="odu-step" data-step="2"><span class="step-n">02</span><div><h3>Se abre el tablero</h3><p>Se saluda a Òrúnmìlà, se extiende el polvo sobre el opón y se llama al signo que tiene tu respuesta.</p></div></li>
+          <li class="odu-step" data-step="3"><span class="step-n">03</span><div><h3>Cae tu odù</h3><p>El signo se marca en ocho posiciones. De los 256 odù, el que aparece es el que habla de tu situación.</p></div></li>
+          <li class="odu-step" data-step="4"><span class="step-n">04</span><div><h3>Se lee el camino</h3><p>Historias, consejo, advertencia y el ebo que corresponde. Te llevás anotado qué hacer y en qué orden.</p></div></li>
+        </ol>
+        <a class="btn btn-primary" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20coordinar%20una%20consulta%20de%20If%C3%A1." target="_blank" rel="noopener">Coordinar mi consulta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inici" id="iniciaciones">
+  <div class="wrap inici-grid">
+    <div class="inici-copy">
+      <p class="eyebrow eyebrow--light" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>04 — Iniciaciones</p>
+      <h2 data-animate="wipe" style="opacity:0">Cuando el camino pide un paso más</h2>
+      <p class="inici-lead" data-animate="fade" style="transform:translateY(18px);opacity:0">Ninguna iniciación se vende ni se apura: se hace cuando el propio Ifá la marca en consulta. Estas son las que se realizan en la casa.</p>
+      <div class="acc" data-animate-stagger>
+        <details class="acc-item" data-animate="fade" style="transform:translateY(18px);opacity:0" name="inici">
+          <summary><span class="acc-mark" aria-hidden="true"></span>Ifá<em>Awo · Iyanifá</em></summary>
+          <div class="acc-body"><p>El camino sacerdotal completo. Se recibe la mano de Òrúnmìlà y se abre el compromiso con el tablero, el estudio de los odù y la vida de sacerdocio.</p><a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20iniciaci%C3%B3n%20de%20If%C3%A1." target="_blank" rel="noopener">Preguntar por Ifá</a></div>
+        </details>
+        <details class="acc-item" data-animate="fade" style="transform:translateY(18px);opacity:0" name="inici">
+          <summary><span class="acc-mark" aria-hidden="true"></span>Orí<em>tu cabeza, tu destino</em></summary>
+          <div class="acc-body"><p>Orí es la divinidad personal: lo que elegiste antes de nacer. Se trabaja para alinear la cabeza con ese acuerdo y sostener las decisiones grandes.</p><a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Or%C3%AD." target="_blank" rel="noopener">Preguntar por Orí</a></div>
+        </details>
+        <details class="acc-item" data-animate="fade" style="transform:translateY(18px);opacity:0" name="inici">
+          <summary><span class="acc-mark" aria-hidden="true"></span>Òrìṣà<em>los orisas de tu casa</em></summary>
+          <div class="acc-body"><p>Recibir el orisa que Ifá indique, con sus atributos, sus días y su forma de atención. Se enseña cómo cuidarlo en la vida cotidiana.</p><a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20iniciaciones%20de%20Oris%C3%A1." target="_blank" rel="noopener">Preguntar por Òrìṣà</a></div>
+        </details>
+        <details class="acc-item" data-animate="fade" style="transform:translateY(18px);opacity:0" name="inici">
+          <summary><span class="acc-mark" aria-hidden="true"></span>Egúngún<em>los que vinieron antes</em></summary>
+          <div class="acc-body"><p>El culto a los ancestros de tu sangre y de tu linaje espiritual. Se ordena la relación con los mayores y se les da su lugar y su atención.</p><a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Eg%C3%BAng%C3%BAn." target="_blank" rel="noopener">Preguntar por Egúngún</a></div>
+        </details>
+        <details class="acc-item" data-animate="fade" style="transform:translateY(18px);opacity:0" name="inici">
+          <summary><span class="acc-mark" aria-hidden="true"></span>Egbé<em>tu compañía espiritual</em></summary>
+          <div class="acc-body"><p>La sociedad espiritual a la que pertenecés. Se trabaja cuando aparecen bloqueos que no se explican, sueños repetidos o una sensación de no pertenecer.</p><a class="card-link" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Egb%C3%A9." target="_blank" rel="noopener">Preguntar por Egbé</a></div>
+        </details>
+      </div>
+    </div>
+    <div class="inici-media">
+      <figure class="inici-photo" data-animate="mask" style="opacity:0">
+        <img src="images/cuenco-dorado-1200x1600.webp" width="1200" height="1600" alt="Ofrenda ceremonial en cuenco dorado sobre fondo oscuro" loading="lazy" decoding="async">
+      </figure>
+      <img class="inici-cut" src="images/mano-cuentas.webp" width="1353" height="1500" alt="Mano con pulseras de cuentas sosteniendo un atributo ritual" loading="lazy" decoding="async" data-parallax="-0.08">
+      <figure class="inici-photo inici-photo--sm" data-animate="mask" style="opacity:0">
+        <img src="images/incienso-1200x1600.webp" width="1200" height="1600" alt="Sahumador de barro encendido" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="modal" id="modalidades">
+  <div class="wrap modal-grid">
+    <div class="modal-copy">
+      <p class="eyebrow" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>05 — Cómo nos encontramos</p>
+      <h2 data-animate="wipe" style="opacity:0">Presencial en Buenos Aires o a distancia</h2>
+      <div class="modal-opts" data-animate-stagger>
+        <article class="modal-opt" data-animate="rise" style="transform:translateY(36px);opacity:0">
+          <h3>En la casa</h3>
+          <p>Consulta presencial con el tablero. La dirección exacta se pasa por WhatsApp al confirmar el turno.</p>
+        </article>
+        <article class="modal-opt" data-animate="rise" style="transform:translateY(36px);opacity:0">
+          <h3>A distancia</h3>
+          <p>Videollamada o audio, para todo el país y el exterior. Recibís por escrito el signo, el consejo y el ebo.</p>
+        </article>
+      </div>
+      <p class="modal-note" data-animate="fade" style="transform:translateY(18px);opacity:0">El valor de cada consulta y de cada trabajo se conversa por WhatsApp según lo que necesites. No se cobra por adelantado para reservar el turno.</p>
+      <p class="modal-wa" data-animate="fade" style="transform:translateY(18px);opacity:0">Escribime a <a href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20coordinar%20una%20consulta." target="_blank" rel="noopener">11 3043-0604</a></p>
+    </div>
+    <div class="modal-side">
+      <figure class="modal-photo" data-animate="mask" style="opacity:0">
+        <img src="images/collar-cauries-1200x1600.webp" width="1200" height="1600" alt="Collares de cuentas y cauríes de la tradición yoruba" loading="lazy" decoding="async">
+      </figure>
+      <div class="map-card" data-animate="fade" style="transform:translateY(24px);opacity:0">
+        <div id="mapa" class="map" role="img" aria-label="Mapa de la zona de atención en Buenos Aires"></div>
+        <p class="map-cap"><span class="odu-tick" aria-hidden="true"></span>Zona de atención · Ciudad de Buenos Aires</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voces" id="voces">
+  <div class="wrap">
+    <header class="sec-head sec-head--center">
+      <p class="eyebrow" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>06 — Voces</p>
+      <h2 data-animate="wipe" style="opacity:0">Lo que dicen quienes se sentaron al tablero</h2>
+    </header>
+    <div class="voces-grid" data-animate-stagger>
+      <blockquote class="voz" data-animate="tilt" style="transform:translateY(40px);opacity:0">
+        <p>“Llegué por un tema de trabajo y me fui con una lista de tres cosas para hacer, en orden. Nunca me habían explicado tan claro qué decía el signo.”</p>
+        <footer>M. G. <span>Villa Urquiza · consulta presencial</span></footer>
+      </blockquote>
+      <blockquote class="voz" data-animate="tilt" style="transform:translateY(40px);opacity:0">
+        <p>“Consulté desde Neuquén por videollamada. Me mandó todo por escrito y me acompañó en cada paso del ebo, sin apurarme y sin prometerme nada raro.”</p>
+        <footer>L. R. <span>Neuquén · consulta a distancia</span></footer>
+      </blockquote>
+      <blockquote class="voz" data-animate="tilt" style="transform:translateY(40px);opacity:0">
+        <p>“Lo que más valoro es el respeto. Pregunté cosas de la familia que no había hablado con nadie y sentí que estaban a salvo ahí.”</p>
+        <footer>C. A. <span>Lomas de Zamora · consulta presencial</span></footer>
+      </blockquote>
+    </div>
+    <p class="voces-note">Testimonios de demostración: se reemplazan por los reales antes de publicar el sitio.</p>
+  </div>
+</section>
+
+<section class="faq" id="preguntas">
+  <div class="wrap faq-grid">
+    <div class="faq-head">
+      <p class="eyebrow" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>07 — Preguntas</p>
+      <h2 data-animate="wipe" style="opacity:0">Lo que se pregunta antes de la primera consulta</h2>
+      <p data-animate="fade" style="transform:translateY(18px);opacity:0">Si tu duda no está acá, escribime y te respondo sin compromiso.</p>
+    </div>
+    <div class="faq-list" data-animate-stagger>
+      <details class="faq-item" data-animate="fade" style="transform:translateY(18px);opacity:0">
+        <summary>¿Necesito saber algo de Ifá para consultar?</summary>
+        <p>No. Venís con tu pregunta en tus palabras y yo traduzco lo que el signo responde. La mayoría de las personas que consultan llegan sin conocer la tradición.</p>
+      </details>
+      <details class="faq-item" data-animate="fade" style="transform:translateY(18px);opacity:0">
+        <summary>¿Cuánto dura una consulta?</summary>
+        <p>Entre 40 y 60 minutos según lo que aparezca en el tablero. Se coordina día y horario por WhatsApp.</p>
+      </details>
+      <details class="faq-item" data-animate="fade" style="transform:translateY(18px);opacity:0">
+        <summary>¿Puedo consultar si no vivo en Buenos Aires?</summary>
+        <p>Sí. La consulta se hace por videollamada o audio y se te envía por escrito el signo, el consejo y el ebo que corresponda.</p>
+      </details>
+      <details class="faq-item" data-animate="fade" style="transform:translateY(18px);opacity:0">
+        <summary>¿Qué es un odù?</summary>
+        <p>Es el signo que cae en el tablero. Cada uno de los 256 odù trae sus historias, sus consejos y sus advertencias, que se leen sobre tu situación concreta.</p>
+      </details>
+      <details class="faq-item" data-animate="fade" style="transform:translateY(18px);opacity:0">
+        <summary>¿Ifá reemplaza al médico o al psicólogo?</summary>
+        <p>No. Ifá acompaña y orienta; no diagnostica, no cura enfermedades y no sustituye ningún tratamiento médico ni psicológico. Si estás en tratamiento, seguí con tu profesional.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cierre" id="cierre">
+  <div class="cierre-bg" aria-hidden="true"><img src="images/cauries-1600x1300.webp" width="1600" height="1300" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap cierre-inner">
+    <p class="eyebrow eyebrow--light" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>Ilé Ase Orúnmila</p>
+    <h2 data-animate="wipe" style="opacity:0">Tu pregunta ya está hecha.<br>Falta que alguien la lleve al tablero.</h2>
+    <p class="cierre-lead" data-animate="fade" style="transform:translateY(20px);opacity:0">Escribime contándome brevemente qué te pasa y coordinamos el turno. Se responde el mismo día.</p>
+    <a class="btn btn-gold" id="cierre-cta" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20pedir%20una%20consulta%20de%20If%C3%A1." target="_blank" rel="noopener" data-animate="fade" style="transform:translateY(20px);opacity:0">Escribir por WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 4"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M11 9v6M23 9v6M11 20v6M17 20v6M23 20v6"/></g></svg>
+      </span>
+      <p><strong>Iyanifa Ajeyimika</strong>Ilé Ase Orúnmila · Buenos Aires</p>
+    </div>
+    <nav class="footer-nav" aria-label="Secciones">
+      <a href="#consultas">Consultas</a>
+      <a href="#odu">La consulta</a>
+      <a href="#iniciaciones">Iniciaciones</a>
+      <a href="#modalidades">Cómo nos encontramos</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="footer-contact">
+      <p>WhatsApp</p>
+      <a href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20pedir%20una%20consulta%20de%20If%C3%A1." target="_blank" rel="noopener">11 3043-0604</a>
+      <p class="footer-hours">Consultas con turno previo</p>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p>Ifá es una práctica espiritual de tradición yoruba. Las consultas orientan y acompañan; no diagnostican ni curan enfermedades, no reemplazan tratamientos médicos ni psicológicos y no garantizan resultados. Mayores de 18 años.</p>
+    <p class="footer-credit">Developed and designed by <a href="https://gokywebs.com" target="_blank" rel="noopener">Gokywebs</a></p>
+  </div>
+</footer>
+
+<a class="wsp-float" id="wsp-float" href="https://wa.me/5491130430604?text=Hola%2C%20quiero%20pedir%20una%20consulta%20de%20If%C3%A1." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.003 0h-.006C7.166 0 0 7.168 0 16c0 3.504 1.129 6.752 3.047 9.392L1.05 31.35l6.156-1.968A15.9 15.9 0 0 0 16.003 32C24.834 32 32 24.83 32 16S24.834 0 16.003 0zm9.318 22.594c-.387 1.09-1.92 1.996-3.144 2.26-.837.178-1.93.32-5.61-1.204-4.706-1.95-7.737-6.73-7.973-7.04-.226-.31-1.902-2.533-1.902-4.832 0-2.299 1.168-3.428 1.638-3.898.387-.387.998-.563 1.585-.563.19 0 .36.01.514.017.47.02.706.048 1.016.79.387.93 1.328 3.23 1.44 3.463.114.234.228.55.07.86-.148.32-.278.46-.512.73-.234.27-.456.478-.69.767-.214.253-.456.524-.184.994.272.46 1.21 1.996 2.6 3.234 1.794 1.598 3.276 2.093 3.79 2.307.383.16.84.122 1.12-.184.356-.386.796-1.028 1.244-1.66.318-.452.72-.508 1.14-.352.428.148 2.72 1.282 3.19 1.516.47.234.782.348.896.542.114.196.114 1.122-.273 2.212z"/></svg>
+</a>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+<script src="/demo/track.js" defer></script>
+</body>
+</html>
