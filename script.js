@@ -1,33 +1,3 @@
-document.addEventListener('contextmenu', e => e.preventDefault());
-document.addEventListener('dragstart', e => e.preventDefault());
-document.addEventListener('keydown', e => {
-  const k = e.key.toLowerCase();
-  if (k === 'f12' || (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(k)) || (e.ctrlKey && k === 'u')) {
-    e.preventDefault();
-  }
-});
-
-function initDevToolsGuard() {
-  let overlay = null;
-  let open = false;
-  window.setInterval(() => {
-    const isOpen = window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200;
-    if (isOpen === open) return;
-    open = isOpen;
-    if (open) {
-      if (!overlay) {
-        overlay = document.createElement('div');
-        overlay.className = 'devtools-overlay';
-        overlay.innerHTML = '<p>Contenido protegido.</p>';
-        document.body.appendChild(overlay);
-      }
-      overlay.classList.add('visible');
-    } else if (overlay) {
-      overlay.classList.remove('visible');
-    }
-  }, 800);
-}
-
 const hasGsap = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -80,9 +50,10 @@ function initHeroIntro() {
     .from('.hero-field', { scale: .82, opacity: 0, duration: 1.3 }, 0)
     .to('.hero .eyebrow', { y: 0, opacity: 1, duration: .7 }, .15)
     .from(lines, { yPercent: 112, duration: 1.05, stagger: .1 }, .2)
-    .to('.hero-lead', { y: 0, opacity: 1, duration: .8 }, .5)
-    .to('.hero-actions', { y: 0, opacity: 1, duration: .8 }, .62)
-    .to('.hero-meta', { y: 0, opacity: 1, duration: .8 }, .72)
+    .to('.hero-welcome', { y: 0, opacity: 1, duration: .75 }, .42)
+    .to('.hero-lead', { y: 0, opacity: 1, duration: .8 }, .52)
+    .to('.hero-actions', { y: 0, opacity: 1, duration: .8 }, .64)
+    .to('.hero-meta', { y: 0, opacity: 1, duration: .8 }, .74)
     .from('.hero-frame', { y: 40, rotate: -16, opacity: 0, duration: 1 }, .5)
     .from('.hero-cut', { y: 70, x: 30, opacity: 0, duration: 1.1 }, .55)
     .from('.hero-chip', { scale: .92, opacity: 0, duration: .7 }, .9)
@@ -367,7 +338,6 @@ initProgress();
 initMagnetic();
 initMap();
 initDetailsRefresh();
-initDevToolsGuard();
 
 if (hasGsap) {
   window.addEventListener('load', () => ScrollTrigger.refresh());
