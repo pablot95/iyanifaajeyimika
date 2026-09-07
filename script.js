@@ -54,9 +54,7 @@ function initHeroIntro() {
     .to('.hero-lead', { y: 0, opacity: 1, duration: .8 }, .52)
     .to('.hero-actions', { y: 0, opacity: 1, duration: .8 }, .64)
     .to('.hero-meta', { y: 0, opacity: 1, duration: .8 }, .74)
-    .from('.hero-frame', { y: 40, rotate: -16, opacity: 0, duration: 1 }, .5)
-    .from('.hero-cut', { y: 70, x: 30, opacity: 0, duration: 1.1 }, .55)
-    .from('.hero-chip', { scale: .92, opacity: 0, duration: .7 }, .9)
+    .from('.hero-frame', { y: 60, rotate: 12, opacity: 0, duration: 1.1 }, .5)
     .from('.dust-motes i', { scale: .4, opacity: 0, duration: .6, stagger: .05 }, .8);
 }
 
@@ -147,7 +145,7 @@ function initOdu() {
       scrollTrigger: {
         trigger: sec,
         start: 'top top',
-        end: '+=190%',
+        end: '+=140%',
         pin: true,
         scrub: .65,
         anticipatePin: 1,
@@ -205,9 +203,7 @@ function initPointerScene() {
   if (!scene || reduced || window.matchMedia('(hover: none)').matches) return;
   const layers = [
     { el: scene.querySelector('.opon--hero'), f: 10 },
-    { el: scene.querySelector('.hero-frame'), f: 22 },
-    { el: scene.querySelector('.hero-cut'), f: -16 },
-    { el: scene.querySelector('.hero-chip'), f: 26 }
+    { el: scene.querySelector('.hero-frame'), f: 22 }
   ].filter(l => l.el);
   let raf = null;
   let tx = 0, ty = 0;
