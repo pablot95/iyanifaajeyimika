@@ -231,6 +231,29 @@ function initPointerScene() {
   scene.classList.add('scene-live');
 }
 
+// en desktop el video va al hueco al lado del titulo de consultas;
+// en mobile se queda donde esta en el HTML, debajo de la primera seccion
+function initVideoPlacement() {
+  const fig = document.getElementById('video-ifa');
+  const slotMobile = document.getElementById('video-slot-mobile');
+  const slotDesktop = document.getElementById('video-slot-desktop');
+  if (!fig || !slotMobile || !slotDesktop) return;
+
+  const mq = window.matchMedia('(min-width: 1081px)');
+  const place = () => {
+    const target = mq.matches ? slotDesktop : slotMobile;
+    if (fig.parentElement === target) return;
+    const video = fig.querySelector('video');
+    const playing = video && !video.paused;
+    target.appendChild(fig);
+    if (playing) video.play().catch(() => {});
+    if (hasGsap) ScrollTrigger.refresh();
+  };
+
+  place();
+  mq.addEventListener('change', place);
+}
+
 function initVideo() {
   const video = document.getElementById('video-casa');
   if (!video) return;
@@ -373,6 +396,7 @@ function initDetailsRefresh() {
 
 document.body.classList.add('js-ready');
 carveOpon();
+initVideoPlacement();
 initHeroIntro();
 initReveals();
 initOdu();

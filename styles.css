@@ -495,16 +495,15 @@ h1 span { display: block; }
 
 .casa-copy h2 { margin-bottom: var(--sp-3); max-width: 24ch; }
 
-/* video de la seccion: entero, sin recortes */
-.casa-video {
-  margin-top: var(--sp-6);
+/* video: entero, sin recortes. En desktop lo mueve el JS al hueco de consultas */
+.video-ifa {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-warm);
   background: var(--color-bg-deep);
   line-height: 0;
 }
-.casa-video video {
+.video-ifa video {
   display: block;
   width: 100%;
   height: auto;
@@ -512,6 +511,7 @@ h1 span { display: block; }
   object-fit: contain;
   background: var(--color-bg-deep);
 }
+#video-slot-mobile .video-ifa { margin-top: var(--sp-6); }
 .casa-copy p { margin-bottom: var(--sp-2); color: var(--color-text-muted); }
 
 .casa-list {
@@ -552,6 +552,19 @@ h1 span { display: block; }
 }
 
 .sec-head { margin-bottom: var(--sp-5); max-width: 44ch; }
+
+/* cabecera de consultas: el titulo a la izquierda y el video en el hueco */
+.consultas-top { display: block; }
+@media (min-width: 1081px) {
+  .consultas-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    align-items: center;
+    margin-bottom: var(--sp-5);
+  }
+  .consultas-top .sec-head { margin-bottom: 0; }
+}
 .sec-head--center { margin-inline: auto; text-align: center; }
 .sec-head--center .eyebrow { justify-content: center; }
 .sec-lead { color: var(--color-text-muted); margin-top: var(--sp-2); }

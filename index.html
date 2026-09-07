@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=switzer@400,500&display=swap">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 <noscript><style>[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
 <script type="application/ld+json">
 {
@@ -140,8 +140,8 @@
       </ul>
     </div>
   </div>
-  <div class="wrap">
-    <figure class="casa-video" data-animate="fade" style="transform:translateY(24px);opacity:0">
+  <div class="wrap" id="video-slot-mobile">
+    <figure class="video-ifa" id="video-ifa" data-animate="fade" style="transform:translateY(24px);opacity:0">
       <video
         id="video-casa"
         poster="images/africa-ifa-poster.webp"
@@ -155,11 +155,14 @@
 
 <section class="consultas" id="consultas">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="eyebrow" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>02 — Consultas</p>
-      <h2 data-animate="wipe" style="opacity:0">Ifá tiene el secreto de la creación y la clave de nuestra felicidad. Ifá es un arte que hace posible que nuestra existencia sea plena</h2>
-      <p class="sec-lead" data-animate="fade" style="transform:translateY(18px);opacity:0">Traé la pregunta concreta que te trajo hasta acá. Elegí el tema y escribime: coordinamos día y horario por WhatsApp.</p>
-    </header>
+    <div class="consultas-top">
+      <header class="sec-head">
+        <p class="eyebrow" data-animate="fade" style="transform:translateY(14px);opacity:0"><span class="odu-tick" aria-hidden="true"></span>02 — Consultas</p>
+        <h2 data-animate="wipe" style="opacity:0">Ifá tiene el secreto de la creación y la clave de nuestra felicidad. Ifá es un arte que hace posible que nuestra existencia sea plena</h2>
+        <p class="sec-lead" data-animate="fade" style="transform:translateY(18px);opacity:0">Traé la pregunta concreta que te trajo hasta acá. Elegí el tema y escribime: coordinamos día y horario por WhatsApp.</p>
+      </header>
+      <div id="video-slot-desktop"></div>
+    </div>
     <div class="cards" data-animate-stagger>
       <article class="card" data-animate="rise" style="transform:translateY(48px);opacity:0">
         <span class="card-num" aria-hidden="true">01</span>
@@ -430,7 +433,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script src="script.js?v=4"></script>
+<script src="script.js?v=5"></script>
 <script src="/demo/track.js" defer></script>
 </body>
 </html>
