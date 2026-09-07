@@ -229,6 +229,55 @@ function initPointerScene() {
   scene.classList.add('scene-live');
 }
 
+function initVideo() {
+  const video = document.getElementById('video-casa');
+  if (!video) return;
+
+  let loaded = false;
+  const load = () => {
+    if (loaded) return;
+    loaded = true;
+    [['webm', 'video/webm'], ['mp4', 'video/mp4']].forEach(([key, type]) => {
+      const src = video.dataset['src' + key.charAt(0).toUpperCase() + key.slice(1)];
+      if (!src) return;
+      const s = document.createElement('source');
+      s.src = src;
+      s.type = type;
+      video.appendChild(s);
+    });
+    video.load();
+  };
+
+  // con reduced-motion no se reproduce solo: queda el poster y los controles
+  if (reduced) {
+    video.autoplay = false;
+    video.controls = true;
+    video.preload = 'metadata';
+    load();
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    load();
+    video.play().catch(() => { video.controls = true; });
+    return;
+  }
+
+  // se descarga recién al acercarse, y se pausa cuando la sección sale de pantalla
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        load();
+        video.play().catch(() => { video.controls = true; });
+      } else if (loaded) {
+        video.pause();
+      }
+    });
+  }, { rootMargin: '300px 0px' });
+
+  io.observe(video);
+}
+
 function initNav() {
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('nav');
@@ -327,6 +376,7 @@ initReveals();
 initOdu();
 initParallax();
 initPointerScene();
+initVideo();
 initNav();
 initSmoothAnchors();
 initWspFloat();
