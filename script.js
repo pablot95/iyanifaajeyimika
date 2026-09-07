@@ -254,6 +254,33 @@ function initVideoPlacement() {
   mq.addEventListener('change', place);
 }
 
+// el video arranca mudo porque el autoplay lo exige; con un click vuelve el sonido
+function initVideoSonido(video, btn, load) {
+  if (!btn) return;
+
+  const pintar = () => {
+    const suena = !video.muted && video.volume > 0;
+    btn.setAttribute('aria-pressed', String(suena));
+    btn.setAttribute('aria-label', suena ? 'Silenciar el video' : 'Activar el sonido del video');
+    const txt = btn.querySelector('.video-sonido-txt');
+    if (txt) txt.textContent = suena ? 'Silenciar' : 'Activar sonido';
+  };
+
+  btn.addEventListener('click', () => {
+    load();
+    video.muted = !video.muted;
+    if (!video.muted) {
+      video.volume = 1;
+      // el click es la interacción que habilita el audio: si estaba pausado, arranca
+      video.play().catch(() => { video.controls = true; });
+    }
+    pintar();
+  });
+
+  video.addEventListener('volumechange', pintar);
+  pintar();
+}
+
 function initVideo() {
   const video = document.getElementById('video-casa');
   if (!video) return;
@@ -273,14 +300,20 @@ function initVideo() {
     video.load();
   };
 
+  const btn = document.getElementById('video-sonido');
+
   // con reduced-motion no se reproduce solo: queda el poster y los controles
   if (reduced) {
     video.autoplay = false;
     video.controls = true;
+    video.muted = false;
     video.preload = 'metadata';
+    if (btn) btn.hidden = true;
     load();
     return;
   }
+
+  initVideoSonido(video, btn, load);
 
   if (!('IntersectionObserver' in window)) {
     load();

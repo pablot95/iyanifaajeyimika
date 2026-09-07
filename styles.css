@@ -512,6 +512,41 @@ h1 span { display: block; }
   background: var(--color-bg-deep);
 }
 #video-slot-mobile .video-ifa { margin-top: var(--sp-6); }
+
+/* el autoplay obliga a arrancar en mudo: este boton devuelve el sonido */
+.video-ifa { position: relative; }
+.video-sonido {
+  position: absolute;
+  right: .85rem;
+  bottom: .85rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem .95rem;
+  border: 1px solid rgba(250, 241, 222, .35);
+  border-radius: 30px;
+  background: rgba(18, 40, 28, .72);
+  backdrop-filter: blur(6px);
+  color: #FAF1DE;
+  font-family: var(--font-body);
+  font-size: .82rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .3s var(--ease-out), transform .3s var(--ease-out), border-color .3s var(--ease-out);
+}
+.video-sonido:hover { background: rgba(18, 40, 28, .9); border-color: var(--color-accent); transform: translateY(-2px); }
+.video-sonido:active { transform: scale(.97); }
+.video-sonido svg { width: 18px; height: 18px; flex: none; }
+.video-sonido .ico-suena { display: none; }
+.video-sonido[aria-pressed="true"] .ico-mudo { display: none; }
+.video-sonido[aria-pressed="true"] .ico-suena { display: block; }
+@media (max-width: 620px) {
+  /* min-height para que el toque tenga area suficiente en pantalla tactil */
+  .video-sonido { right: .55rem; bottom: .55rem; padding: .5rem .85rem; min-height: 44px; font-size: .76rem; gap: .4rem; }
+  .video-sonido svg { width: 16px; height: 16px; }
+}
 .casa-copy p { margin-bottom: var(--sp-2); color: var(--color-text-muted); }
 
 .casa-list {
