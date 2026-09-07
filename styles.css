@@ -392,27 +392,43 @@ h1 span { display: block; }
 
 .hero-frame {
   position: absolute;
+  top: 2%;
+  left: -4%;
+  width: 37%;
+  max-width: 218px;
+  transform: rotate(-5deg);
+  background: var(--color-bg-alt);
+  padding: 8px 8px 34px;
+  border-radius: 3px;
+  box-shadow: var(--shadow-warm);
+  z-index: 3;
+}
+.hero-frame img { width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; object-position: center; border-radius: 2px; }
+.hero-frame figcaption {
+  position: absolute;
+  left: 10px; right: 10px; bottom: 10px;
+  font-size: .58rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  line-height: 1.3;
+}
+
+/* foto protagonista del hero, la que reemplaza a la mano con el cauri */
+.hero-photo {
+  position: absolute;
   right: -6%;
   bottom: 1%;
   width: 68%;
   max-width: 396px;
   transform: rotate(3deg);
   background: var(--color-bg-alt);
-  padding: 10px 10px 40px;
+  padding: 10px;
   border-radius: 3px;
   box-shadow: var(--shadow-warm);
   z-index: 5;
 }
-.hero-frame img { width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; object-position: center; border-radius: 2px; }
-.hero-frame figcaption {
-  position: absolute;
-  left: 12px; right: 12px; bottom: 13px;
-  font-size: .68rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--color-secondary);
-  line-height: 1.3;
-}
+.hero-photo img { width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; object-position: center; border-radius: 2px; }
 
 .dust-motes { position: absolute; inset: 0; pointer-events: none; z-index: 6; }
 .dust-motes i {
@@ -902,16 +918,6 @@ h1 span { display: block; }
 }
 .inici-photo--sm { aspect-ratio: 3 / 4; }
 
-.inici-banda {
-  margin-top: var(--sp-6);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 30px 60px -28px rgba(0, 0, 0, .8);
-  aspect-ratio: 16 / 9;
-  max-height: 62svh;
-}
-.inici-banda img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
-
 .inici-photo--md {
   position: absolute;
   left: -16%;
@@ -1258,7 +1264,8 @@ h1 span { display: block; }
 .line-wrap { display: block; overflow: hidden; padding-bottom: .04em; }
 
 .scene-live .opon--hero,
-.scene-live .hero-frame {
+.scene-live .hero-frame,
+.scene-live .hero-photo {
   translate: var(--px, 0px) var(--py, 0px);
   transition: translate .55s var(--ease-out);
 }
@@ -1327,7 +1334,8 @@ h1 span { display: block; }
   .nav-cta { justify-content: center; margin-top: .4rem; }
   .nav-toggle { display: flex; }
   .header-inner { position: relative; }
-  .hero-frame { width: 82%; right: 3%; bottom: 0; }
+  .hero-frame { width: 38%; left: -2%; }
+  .hero-photo { width: 82%; right: 3%; bottom: 0; }
   .odu-ikin { width: 32%; right: 0; }
   .modal-side { grid-template-columns: 1fr; }
   .modal-photo { aspect-ratio: 4 / 3; max-height: 46svh; }
@@ -1354,8 +1362,8 @@ h1 span { display: block; }
 }
 
 @media (max-width: 420px) {
-  .hero-frame { width: 86%; right: 3%; bottom: 0; padding: 6px 6px 30px; }
-  .hero-frame figcaption { font-size: .56rem; left: 8px; right: 8px; bottom: 9px; }
+  .hero-frame { display: none; }
+  .hero-photo { width: 88%; right: 2%; bottom: 0; padding: 7px; }
 }
 
 @media (min-width: 1081px) and (max-height: 820px) {

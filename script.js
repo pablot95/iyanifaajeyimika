@@ -54,7 +54,8 @@ function initHeroIntro() {
     .to('.hero-lead', { y: 0, opacity: 1, duration: .8 }, .52)
     .to('.hero-actions', { y: 0, opacity: 1, duration: .8 }, .64)
     .to('.hero-meta', { y: 0, opacity: 1, duration: .8 }, .74)
-    .from('.hero-frame', { y: 60, rotate: 12, opacity: 0, duration: 1.1 }, .5)
+    .from('.hero-photo', { y: 60, rotate: 12, opacity: 0, duration: 1.1 }, .5)
+    .from('.hero-frame', { y: 40, rotate: -16, opacity: 0, duration: 1 }, .62)
     .from('.dust-motes i', { scale: .4, opacity: 0, duration: .6, stagger: .05 }, .8);
 }
 
@@ -203,7 +204,8 @@ function initPointerScene() {
   if (!scene || reduced || window.matchMedia('(hover: none)').matches) return;
   const layers = [
     { el: scene.querySelector('.opon--hero'), f: 10 },
-    { el: scene.querySelector('.hero-frame'), f: 22 }
+    { el: scene.querySelector('.hero-frame'), f: 22 },
+    { el: scene.querySelector('.hero-photo'), f: -16 }
   ].filter(l => l.el);
   let raf = null;
   let tx = 0, ty = 0;
