@@ -374,27 +374,28 @@ h1 span { display: block; }
   border-radius: 50%;
 }
 
+/* el tablero va entero arriba a la derecha; las fotos lo rodean sin taparlo (pedido del cliente, 13-sep) */
 .hero-scene {
   position: relative;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  aspect-ratio: 5 / 6;
 }
 
 .opon { position: relative; }
 .opon svg { width: 100%; height: auto; display: block; }
 
 .opon--hero {
-  width: min(100%, 480px);
+  position: absolute;
+  top: 0;
+  right: 2%;
+  width: 62%;
   filter: drop-shadow(0 40px 60px rgba(43, 27, 14, .34));
 }
 
 .hero-frame {
   position: absolute;
-  top: 2%;
-  left: -4%;
-  width: 37%;
+  top: 14%;
+  left: 0;
+  width: 27%;
   max-width: 218px;
   transform: rotate(-5deg);
   background: var(--color-bg-alt);
@@ -417,8 +418,8 @@ h1 span { display: block; }
 /* foto protagonista del hero, la que reemplaza a la mano con el cauri */
 .hero-photo {
   position: absolute;
-  right: -6%;
-  bottom: 1%;
+  left: 16%;
+  bottom: 0;
   width: 68%;
   max-width: 396px;
   transform: rotate(3deg);
@@ -968,7 +969,7 @@ h1 span { display: block; }
 
 .inici-photo--md {
   position: absolute;
-  left: -16%;
+  left: -4%;
   bottom: -8%;
   width: 46%;
   z-index: 4;
@@ -1382,8 +1383,6 @@ h1 span { display: block; }
   .nav-cta { justify-content: center; margin-top: .4rem; }
   .nav-toggle { display: flex; }
   .header-inner { position: relative; }
-  .hero-frame { width: 38%; left: -2%; }
-  .hero-photo { width: 82%; right: 3%; bottom: 0; }
   .odu-ikin { width: 32%; right: 0; }
   .modal-side { grid-template-columns: 1fr; }
   .modal-photo { aspect-ratio: 4 / 3; max-height: 46svh; }
@@ -1411,7 +1410,9 @@ h1 span { display: block; }
 
 @media (max-width: 420px) {
   .hero-frame { display: none; }
-  .hero-photo { width: 88%; right: 2%; bottom: 0; padding: 7px; }
+  .hero-scene { aspect-ratio: 2 / 3; }
+  .opon--hero { width: 76%; right: 12%; }
+  .hero-photo { width: 88%; left: 6%; padding: 7px; }
 }
 
 @media (min-width: 1081px) and (max-height: 820px) {
