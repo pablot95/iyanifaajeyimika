@@ -941,7 +941,14 @@ h1 span { display: block; }
   to { opacity: 1; transform: none; }
 }
 
-.inici-media { position: relative; width: 100%; }
+/* la de la mujer al lado de las dos chicas, ninguna tapa a la otra (pedido del cliente, 17-sep) */
+.inici-media {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: clamp(.7rem, 1.8vw, 1.2rem);
+}
+
+.inici-side { display: grid; gap: inherit; }
 
 .inici-photo {
   border-radius: var(--radius);
@@ -957,27 +964,6 @@ h1 span { display: block; }
   transition: transform .9s var(--ease-out);
 }
 .inici-photo:hover img { transform: scale(1.06); }
-
-.inici-photo--sm {
-  position: absolute;
-  right: -4%;
-  bottom: -12%;
-  width: 44%;
-  border: 6px solid var(--color-bg-deep);
-}
-.inici-photo--sm { aspect-ratio: 3 / 4; }
-
-.inici-photo--md {
-  position: absolute;
-  left: -4%;
-  bottom: -8%;
-  width: 46%;
-  z-index: 4;
-  aspect-ratio: 3 / 4;
-  max-height: none;
-  border: 6px solid var(--color-bg-deep);
-  box-shadow: 0 30px 50px -22px rgba(0, 0, 0, .85);
-}
 
 /* ---------- modalidades ---------- */
 
@@ -1343,7 +1329,6 @@ h1 span { display: block; }
   .opon--big { width: min(100%, 380px); }
   .faq-head { position: static; }
   .inici-media { max-width: 480px; margin-inline: auto; margin-top: var(--sp-5); }
-  .inici-photo--md { left: -8%; width: 42%; }
   .modal-side { grid-template-columns: 1fr 1fr; }
 }
 
